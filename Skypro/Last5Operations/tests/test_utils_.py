@@ -1,4 +1,3 @@
-import pytest
 from tests.conftest import utils_fix
 
 from utils.utils_ import read_json, search_executed, sort_executed, edit_date, secret_numb
