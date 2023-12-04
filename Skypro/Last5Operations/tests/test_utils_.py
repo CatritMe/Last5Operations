@@ -1,6 +1,6 @@
 from tests.conftest import utils_fix
 
-from utils.utils_ import read_json, search_executed, sort_executed, edit_date, secret_numb
+from utils.utils_ import read_json, search_executed, sort_executed, edit_date, secret_numb, print_operations
 
 
 def test_read_json():
@@ -96,3 +96,9 @@ def test_sort_executed(utils_fix):
             "to": "Счет 72731966109147704472"
         }
     ]
+
+
+def test_print_operations(utils_fix):
+    assert print_operations(utils_fix) == ['04.04.2018 Перевод организации\nVisa Gold  5999 41** **** 6353 -> Счет  ** 4472\n40701.91 USD',
+                                              '08.12.2019 Открытие вклада\nСчет  ** 5907\n41096.24 USD',
+                                           '12.09.2018 Перевод организации\nVisa Platinum  1246 37** **** 3588 -> Счет  ** 1657\n67314.70 руб.']
